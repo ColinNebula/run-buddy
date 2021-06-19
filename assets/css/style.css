@@ -23,6 +23,10 @@ header h1 {
   margin: 0;
   display: inline;
 }
+/* trying to adjust <h3> element to make it larger set margin to 0 reduce word wrapping*/
+header h3 {
+  margin: 0;
+}
 
 header a {
   text-decoration: none;
@@ -42,6 +46,25 @@ header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
   font-size: 22px;
+}
+
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.form-input {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -67,3 +90,30 @@ footer div {
   text-align: right;
 }
 
+section {
+  padding: 60px;
+}
+
+/* Hero Style Start */
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-form {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #024e76;
+  background-color: #fce138;
+  padding: 20px;
+  width: 500px;
+  color: #024e76;
+  position: absolute;
+  bottom: 120px;
+  right: 140px;
+}
+
+/* Hero Style End */
