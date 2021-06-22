@@ -57,6 +57,19 @@ header nav ul li a {
   margin: 0;
 }
 
+.hero-form label {
+  margin: 0 5px;
+}
+
+.hero-form button {
+  color: #fce138;
+  background-color: #024e76;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+/* HERO STYLE END */
+
 .form-input {
   border: 1px solid #024e76;
   display: block;
