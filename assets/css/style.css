@@ -70,6 +70,30 @@ header nav ul li a {
 }
 /* HERO STYLE END */
 
+.intro {
+  text-align: center;
+
+}
+
+.intro h2 {
+  /* add this alongside your other declarations */
+  display: inline-block;
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-bottom: 3px solid;
+  border-color: #fce135;
+}
+
+.intro p {
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #39a6b2;
+  width: 80%;
+  font-size: 20px;
+}
+
 .form-input {
   border: 1px solid #024e76;
   display: block;
