@@ -294,3 +294,13 @@ section {
   font-size: 20px;
   color: red;
 }
+
+/* Hero Home Page */
+.hero {
+  margin: 20px;
+  background-color: white;
+  font-size: 20px;
+  color: blue;
+}
+
+/* Secondary page Hero */
