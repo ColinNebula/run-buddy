@@ -2,7 +2,7 @@
 
 ## Purpose
 A website that offers fitness training services.
-This website showcases essential features including screen reader for vision challenged users
+It also showcases essential features including screen reader for vision challenged users
 and search engine optimisation (SEO) 
 where runners can go to sign up with a run buddy.
 
