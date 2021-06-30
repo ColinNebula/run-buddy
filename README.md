@@ -1,3 +1,21 @@
-# run-buddy is a very intuitive website where runners can go to sign up and get a run buddy.
-This website is easy to read and understand. 
-it is filled with essential features including screen reader for vision challenged users and search engine optimisation (SEO)
+# Run Buddy
+
+## Purpose
+A website that offers fitness training services.
+It also showcases essential features including screen reader for vision challenged users
+and search engine optimisation (SEO) 
+where runners can go to sign up with a run buddy.
+
+
+## Built With
+* HTML
+* CSS
+
+## Website
+https://lernantino.github.io/run-buddy/
+
+## Contribution
+Made with ❤️ by [your name]
+
+
+
