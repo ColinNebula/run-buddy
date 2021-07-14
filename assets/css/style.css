@@ -1,10 +1,10 @@
 CSS
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-} 
+ } 
 
 body {
    /* more on crazy alphanumerical value in a minute! */
@@ -24,12 +24,9 @@ header {
 
 header h1 {
   font-weight: bold;
+  display: inline;
   font-size: 36px;
   color: #fce138;
-  margin: 0;
-}
-/* trying to adjust <h3> element to make it larger set margin to 0 reduce word wrapping*/
-header h3 {
   margin: 0;
 }
 
@@ -42,10 +39,64 @@ header nav {
   margin: 7px 0;
 }
 
+header nav ul li {
+  display: inline;
+}
+
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
   font-size: 22px;
+}
+
+/* Footer Style starts  */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #fce138;
+  width: 100%;
+  padding: 40px 35px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #024e76;
+}
+
+footer h2 {
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+/* Footer Style ends  */
+
+/* STYLE ALL SECTION TAGS */
+section {
+  padding: 60px;
+}
+
+/* Hero Style Start */
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-form {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #024e76;
+  background-color: #fce138;
+  padding: 20px;
+  color: #024e76;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
 .hero-form p {
@@ -61,6 +112,18 @@ header nav ul li a {
   margin: 0 5px;
 }
 
+.form-input {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  width: 40%;
+  margin: 3.5%;
+}
+
 .hero-form button {
   color: #fce138;
   background-color: #024e76;
@@ -70,11 +133,22 @@ header nav ul li a {
 }
 /* HERO STYLE END */
 
-.intro {
-  text-align: center;
-
+.hero-cta {
+  width: 35%;
+  text-align: right;
+  margin: 3.5%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
+.hero-cta h2 {
+  font-style: italic;
+  font-size: 55px;
+  color: #fce138;
+}
+
+/* Section title starts*/
 .section-title {
   font-size: 55px;
   color: #024e76;
@@ -91,6 +165,12 @@ header nav ul li a {
 .secondary-border {
   border-color: #30a6b2;
 }
+/* Section title ends*/
+
+.intro {
+  text-align: center;
+
+}
 
 .intro p {
   margin: 0 auto;
@@ -100,6 +180,7 @@ header nav ul li a {
   font-size: 20px;
 }
 
+/* What to do section starts */
 .steps {
   text-align: center;
   background: #fce138;
@@ -124,7 +205,9 @@ header nav ul li a {
 .steps span {
   font-size: 38px;
 }
+/* What to do section ends */
 
+/* Trainers section starts */
 .trainers {
   text-align: center;
 }
@@ -163,7 +246,54 @@ header nav ul li a {
   font-size: 17px;
   line-height: 1.3;
 }
+/* Trainer section ends */
 
+/* Hero Style End */
+
+/* reach out style starts */
+.contact {
+  text-align: center;
+  background: #024e76;
+}
+
+.contact h2 {
+  color: #fce138;
+}
+
+.contact-info iframe {
+  width: 400px;
+height: 400px;
+}
+
+.contact-info div {
+  width: 410px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 30px 0 0 60px;
+  color: white;
+}
+
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
+}
+
+.contact-info p, .contact-info address {
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.contact-info a {
+  color: #fce138;
+}
+
+
+/* REACH OUT STYLES END */
+
+/* UTILITIES */
 .text-left {
   text-align: left;
 }
@@ -171,64 +301,3 @@ header nav ul li a {
 .text-right {
   text-align: right;
 }
-
-.form-input {
-  border: 1px solid #024e76;
-  display: block;
-  padding: 7px 15px;
-  font-size: 16px;
-  color: #024e76;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-footer {
-  background: #fce138;
-  width: 100%;
-  padding: 40px 35px;
-}
-
-footer a {
-  color: #024e76;
-}
-
-footer h2 {
-  display: inline;
-  color: #024e76;
-  font-size: 30px;
-  margin: 0;
-}
-
-footer div {
-  float: right;
-  line-height: 1.5;
-  text-align: right;
-}
-
-section {
-  padding: 60px;
-}
-
-/* Hero Style Start */
-.hero {
-  background-image: url("../images/hero-bg.jpg");
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero-form {
-  border-style: solid;
-  border-width: 3px;
-  border-color: #024e76;
-  background-color: #fce138;
-  padding: 20px;
-  width: 500px;
-  color: #024e76;
-  position: absolute;
-  bottom: 120px;
-  right: 140px;
-}
-
-/* Hero Style End */
