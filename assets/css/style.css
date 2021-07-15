@@ -235,25 +235,30 @@ section {
 /* What to do section ends */
 
 /* Trainers section starts */
+.trainers {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .trainer {
-  width: 900px;
-  margin: 0 auto 30px auto;
+  flex: 1;
+  margin: 30px;
   background: #024e76;
   color: #fce138;
-  overflow: auto;
+  
 }
 
 .trainer img {
-  width: 35%;
-  float: left;
+  width: 100%;
+
 }
 
 .trainer-bio {
   line-height: 1.3;
-  padding: 35px;
-  float: left;
-  width: 65%;
+  padding: 25px;
 }
 
 .trainer-bio h3 {
@@ -263,7 +268,6 @@ section {
 
 .trainer-bio h4 {
   font-weight: lighter;
-  font-size: 22px;
   margin-bottom: 15px;
 }
 
@@ -285,8 +289,19 @@ section {
 }
 
 .contact-info iframe {
-  width: 400px;
-height: 400px;
+
+  height: 400px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info > * {
+  flex: 1;
+  margin: 15px;
 }
 
 .contact-info div {
@@ -295,7 +310,6 @@ height: 400px;
   vertical-align: top;
   text-align: left;
   margin: 30px 0 0 60px;
-  color: white;
 }
 
 .contact-info h3 {
@@ -306,10 +320,30 @@ height: 400px;
 .contact-info p, .contact-info address {
   margin: 20px 0;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
 }
 
+
+.contact-form input, .contact-form textarea {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+/* Contact Form Button */
+.contact-form button {
+  width: 100%;
+  border: none;
+  background: #fce138;
+  color: #024e76;
+  padding: 15px 0;
+  font-size: 16px;
+}
 .contact-info a {
   color: #fce138;
 }
