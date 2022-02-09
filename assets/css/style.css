@@ -1,43 +1,50 @@
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- } 
-
-body {
-   /* more on crazy alphanumerical value in a minute! */
-   color: #39a6b2;
-   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* apply style to <header> */
+body {
+  color: var(--tertiary-color);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* HEADER / NAV BAR STYLES START */
+
 header {
-  background-attachment: fixed;
-  background-image: url("../images/hero-bg.jpg");
-  background-size: cover;
-  background-position: 80%;
-  position: -webkit- sticky;
-  position: sticky;
-  top: 0;
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 80%;
+  z-index: 9999;
 }
 
 header h1 {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  font-size: 36px;
-  color: #fce138;
   margin: 0;
+  font-size: 36px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 header nav {
@@ -53,38 +60,35 @@ header nav ul {
 }
 
 header nav ul li a {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px 15px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 header nav ul li a:hover {
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   border-radius: 15px;
   text-shadow: none;
 }
 
-/* Adding Shadow */
+/* HEADER / NAVBAR STYLES END */
 
-/* Header Style Ends  */
 
-/* Footer Style starts  */
+
+/* FOOTER STYLES START */
 footer {
+  background: var(--primary-color);
+  padding: 40px 35px;
   display: flex;
   justify-content: space-between;
-  background: #fce138;
-  width: 100%;
-  padding: 40px 35px;
   flex-wrap: wrap;
-}
-
-footer a {
-  color: #024e76;
+  width: 100%;
 }
 
 footer h2 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 30px;
   margin: 0;
 }
@@ -93,26 +97,30 @@ footer div {
   line-height: 1.5;
   text-align: right;
 }
-/* Footer Style ends  */
 
-/* style all sections */
+footer a {
+  color: var(--secondary-color);
+}
+/* END FOOTER STYLES */
+
+/* STYLE ALL SECTION TAGS */
 section {
   padding: 60px;
 }
 
-/* Hero Style Start */
+/* HERO STYLES START */
 .hero {
-  background-image: url("../images/hero-bg.jpg");
+  background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start; 
+  align-items: flex-start;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 .hero-cta {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 35%;
   text-align: right;
   margin: 3.5%;
@@ -124,46 +132,48 @@ section {
 .hero-cta h2 {
   font-style: italic;
   font-size: 55px;
-  color: #fce138;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Form Start */
 .hero-form {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  border: 3px solid #024e76;
-  background-color: #fce138;
+  border: 3px solid var(--secondary-color);
+  background-color: rgba(255, 225, 56, 0.8);
   padding: 20px;
-  color: #024e76;
+  color: var(--secondary-color);
   width: 40%;
   margin: 3.5%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-input {
-  background-color: rgba(255,255,255, 0.75);
-  border-radius: 10px;
-  border: 1px solid #024e76;
-  display: block;
-  padding: 7px 15px;
-  font-size: 16px;
-  color: #024e76;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-/* Input form focus */
-.form-input:focus {
-  background-color: rgba(255,255,255, 1);
-  outline: none;
-}
-
-.hero-form p {
-  margin: 5px 0 15px 0;
+.hero-form button:hover {
+  background-color: var(--tertiary-color);  
 }
 
 .hero-form h3 {
   font-size: 24px;
   margin: 0;
+}
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.form-input {
+  border: 1px solid var(--secondary-color);
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: var(--secondary-color);
+  width: 100%;
+  margin-bottom: 15px; 
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -171,56 +181,115 @@ section {
 }
 
 .hero-form button {
-  border-radius: 10px;
-  color: #fce138;
-  background-color: #024e76;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
+} 
+
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
 }
-.hero-form button:hover {
-  background-color: #39a6b2;  
+
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
 }
-/* Hero Section Ends */
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);  
+  border: 1px solid var(--secondary-color);  
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
+}
+/* HERO STYLES END */
 
 
-
-/* Section title starts*/
+/* SECTION TITLE STYLES START */
 .section-title {
   font-size: 48px;
-  color: #024e76;
+  border-bottom: 3px solid;
+  color: var(--secondary-color);
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto 35px auto;
   width: 50%;
-  border-bottom: 3px solid;
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--primary-color);
 }
 
 .secondary-border {
-  border-color: #30a6b2;
+  border-color: var(--tertiary-color);
 }
-/* Section title ends*/
+/* SECTION TITLE STYLES END */
 
+/* WHAT WE DO STYLES */
 .intro p {
-  text-align: center;
-  margin: 0 auto;
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--tertiary-color);
   width: 80%;
+  margin: 0 auto;
   font-size: 20px;
+  text-align: center;
 }
+/* WHAT YOU DO STYLES END */
 
-/* What to do section starts */
+
+/* WHAT YOU DO STYLES START */
 .steps { 
-  background: #fce138;
+  background: var(--primary-color);
 }
 
 .step {
-  Margin: 50px auto;
+  margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
   display: flex;
@@ -228,18 +297,15 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.step:nth-child(enen) {
-  border-bottom: 1px solid #39a6b2;
-}
+
 .step:last-child {
   border-bottom: none;
 }
 
 .step h3 {
-  flex: 1 30%;
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 46px;
-
+  flex: 1 30%;
 }
 
 .step-info {
@@ -254,29 +320,27 @@ section {
   margin-right: 20px;
 }
 
-.step-text {
-  flex: 12;
-}
-
 .step-img img {
   max-width: 100%;
 }
 
+.step-text {
+  flex: 12;
+}
+
 .step-text p {
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-size: 18px;
 }
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024E76;
+  color: var(--secondary-color);
 }
+/* WHAT YOU DO STYLES END */
 
-
-/* What to do section ends */
-
-/* Trainers section starts */
+/* MEET THE TRAINERS START */
 .trainers {
   width: 100%;
   margin: 0 auto;
@@ -286,26 +350,23 @@ section {
 }
 
 .trainer {
+  margin: 20px;
   flex: 1;
-  margin: 30px;
-  background: #024e76;
-  color: #fce138;
-  
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .trainer img {
   width: 100%;
-
 }
 
 .trainer-bio {
-  line-height: 1.3;
   padding: 25px;
+  line-height: 1.3;
 }
 
 .trainer-bio h3 {
   font-size: 28px;
-  
 }
 
 .trainer-bio h4 {
@@ -316,24 +377,16 @@ section {
 
 .trainer-bio p {
   font-size: 17px;
-  
 }
-/* Trainer section ends */
+/* TRAINER STYLES END */
 
-/* Hero Style End */
-
-/* reach out style starts */
+/* REACH OUT STYLES START */
 .contact {
-  background: #024e76;
+  background: var(--secondary-color);
 }
 
 .contact h2 {
-  color: #fce138;
-}
-
-.contact-info iframe {
-
-  height: 400px;
+  color: var(--primary-color);
 }
 
 .contact-info {
@@ -347,16 +400,16 @@ section {
   margin: 15px;
 }
 
+.contact-info iframe {
+  height: 400px;
+}
+
 .contact-info div {
-  width: 410px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: left;
-  margin: 30px 0 0 60px;
+  color: white;
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -367,18 +420,17 @@ section {
   font-style: normal;
 }
 
-
 .contact-form input, .contact-form textarea {
-  background-color: rgba(255,255,255, 0.75);
-  border-radius: 10px;
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
@@ -386,26 +438,25 @@ section {
   outline: none;
 }
 
-/* Contact Form Button */
 .contact-form button {
-  border-radius: 10px;
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
 }
+
 .contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--primary-color);
+  background: var(--tertiary-color);
 }
 
 .contact-info a {
-  color: #fce138;
+  color: var(--primary-color);
 }
-
-
 /* REACH OUT STYLES END */
 
 /* UTILITIES */
@@ -421,17 +472,14 @@ section {
   display: flex;
 }
 
-/* Media Queries */
-
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-/* this will be applied on any screen smaller than 980px */
 @media screen and (max-width: 980px) {
   header {
-    position: relative;
     padding-bottom: 0;
     justify-content: center;
-    color: tomato;
+    position: relative;
   }
+
   header h1 {
     width: 100%;
     text-align: center;
@@ -451,34 +499,32 @@ section {
     text-align: center;
     width: 100%;
   }
-}
 
-.hero-cta, .hero-form {
-  width: 100%;
-}
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  
+  .hero-cta {
+    text-align: center;
+  }
 
-.hero-cta {
-  text-align: center;
-}
-
-.section-title {
-  width: 80%;
-}
-
-.trainer {
-  flex: 0 70%;
-}
-
-.contact-info iframe{
-  flex: 1 100%;
+  .section-title {
+    width: 80%;
+  }
+  
+  .trainer {
+    flex: 0 70%;
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%;
+  }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
-/* this will be applied on any screen between 768px and 575px */
 @media screen and (max-width: 768px) {
   section {
     padding: 30px 15px;
-    color: #39a6b2;
   }
 
   .step h3 {
@@ -503,12 +549,12 @@ section {
     flex: 100%;  
   }
 
+  .trainer-bio h3, .trainer-bio h4 {
+    display: block;
+  }
 }
 
-
-
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-/* this will be applied on any screen smaller than 575px */
 @media screen and (max-width: 575px) {
   .hero-form button {
     width: 100%;
@@ -536,15 +582,5 @@ section {
 
   .contact-form {
     order: 3;
-  }
-}
-  
-
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-/* this will be applied on any screen smaller than 575px */
-@media screen and (max-width: 575px) {
-  header nav h1 {
-    
-    font-size: 100px;
   }
 }
